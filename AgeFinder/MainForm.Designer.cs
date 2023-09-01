@@ -32,6 +32,8 @@ namespace AgeFinder
             this.InstructionsLabel = new System.Windows.Forms.Label();
             this.AgeSelector = new System.Windows.Forms.NumericUpDown();
             this.GuessButton = new System.Windows.Forms.Button();
+            this.ToggleModeButton = new System.Windows.Forms.Button();
+            this.IDCardTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AgeSelector)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,14 +75,40 @@ namespace AgeFinder
             this.GuessButton.UseVisualStyleBackColor = false;
             this.GuessButton.Click += new System.EventHandler(this.GuessButton_Click);
             // 
+            // ToggleModeButton
+            // 
+            this.ToggleModeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ToggleModeButton.Location = new System.Drawing.Point(807, 17);
+            this.ToggleModeButton.Name = "ToggleModeButton";
+            this.ToggleModeButton.Size = new System.Drawing.Size(132, 48);
+            this.ToggleModeButton.TabIndex = 3;
+            this.ToggleModeButton.Text = "使用居民身份证";
+            this.ToggleModeButton.UseVisualStyleBackColor = false;
+            this.ToggleModeButton.Click += new System.EventHandler(this.ToggleModeButton_Click);
+            // 
+            // IDCardTextBox
+            // 
+            this.IDCardTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.IDCardTextBox.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDCardTextBox.Location = new System.Drawing.Point(21, 138);
+            this.IDCardTextBox.MaxLength = 18;
+            this.IDCardTextBox.Name = "IDCardTextBox";
+            this.IDCardTextBox.Size = new System.Drawing.Size(918, 74);
+            this.IDCardTextBox.TabIndex = 4;
+            this.IDCardTextBox.Text = "请在此处输入居民身份证号...";
+            this.IDCardTextBox.Enter += new System.EventHandler(this.IDCardTextBox_Enter);
+            this.IDCardTextBox.Leave += new System.EventHandler(this.IDCardTextBox_Leave);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(951, 469);
-            this.Controls.Add(this.GuessButton);
             this.Controls.Add(this.AgeSelector);
+            this.Controls.Add(this.IDCardTextBox);
+            this.Controls.Add(this.ToggleModeButton);
+            this.Controls.Add(this.GuessButton);
             this.Controls.Add(this.InstructionsLabel);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -97,6 +125,8 @@ namespace AgeFinder
         private System.Windows.Forms.Label InstructionsLabel;
         private System.Windows.Forms.NumericUpDown AgeSelector;
         private System.Windows.Forms.Button GuessButton;
+        private System.Windows.Forms.Button ToggleModeButton;
+        private System.Windows.Forms.TextBox IDCardTextBox;
     }
 }
 
